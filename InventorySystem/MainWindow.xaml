@@ -1,0 +1,26 @@
+﻿<Window x:Class="InventorySystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inventory Dashboard" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <StackPanel Background="#2D2D30" Grid.Column="0">
+            <TextBlock Text="INVENTORY" Foreground="White" FontSize="20" Margin="10"/>
+            <Button Content="Products" Click="Products_Click" Margin="10" />
+            <Button Content="Suppliers" Click="Suppliers_Click" Margin="10"/>
+            <Button Content="Stock" Click="Stock_Click" Margin="10"/>
+            <Button Content="Sales" Click="Sales_Click" Margin="10"/>
+            <Button Content="Reports" Click="Reports_Click" Margin="10"/>
+        </StackPanel>
+
+        <!-- Frame where pages are loaded -->
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
